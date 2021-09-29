@@ -1,6 +1,9 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
+
 
 app = Flask(__name__)
+CORS(app)
 
 users = {
    'users_list' :
@@ -73,4 +76,4 @@ def get_users():
 
 
 
-app.run(port=8000)
+app.run(port=5000)
