@@ -1,5 +1,7 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Response
 from flask_cors import CORS
+import uuid
+import json
 
 
 app = Flask(__name__)
@@ -60,11 +62,12 @@ def get_users():
       return users
    elif request.method == 'POST':
       userToAdd = request.get_json()
+      userToAdd['id']= str(uuid.uuid4())
       users['users_list'].append(userToAdd)
-      resp = jsonify(success=True, status_code=201, users=users)
       #resp.status_code = 200 #optionally, you can always set a response code.
       # 200 is the default code for a normal response
-      return resp
+
+      return Response(json.dumps(users),status=201)
    elif request.method == 'DELETE':
        userToDelete = request.get_json()
        for index, user in enumerate(users['users_list']):
