@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c90db46-718f-4cd9-b94c-73bb3d2915d2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../react-assignment1/src/MyApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/../react-assignment1/src/MyApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react-assignment1/src/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/../react-assignment1/src/Table.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +142,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
