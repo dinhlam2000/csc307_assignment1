@@ -35,19 +35,34 @@ function MyApp() {
         }
     }
 
-    function removeOneCharacter (index) {
-        const updated = characters.filter((character, i) => {
-            return i !== index
-        });
-        setCharacters(updated);
+    async function makeDeleteCall(person){
+        try {
+            const person_id = person.id;
+            const url = 'http://localhost:5000/users/' + String(person_id)
+            const response = await axios.delete(url);
+            return response;
+        }
+        catch (error) {
+            console.log(error);
+            return false;
+        }
+    }
+
+    function removeOneCharacter (person) {
+        makeDeleteCall(person).then(result => {
+            if (result.status === 204) {
+                fetchAll().then(result => {
+                    if (result)
+                        setCharacters(result);
+                });
+            }
+        })
     }
 
     function updateList(person) {
         makePostCall(person).then( result => {
             if (result.status === 201)
             {
-                console.log(result)
-
                 setCharacters(result.data.users_list );
 
             }
